@@ -1,0 +1,22 @@
+{
+  "name": "another-mf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "host",
+    "remote"
+  ],
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./**\" dev",
+    "build": "pnpm  --parallel --filter \"./**\" build",
+    "serve": "pnpm  --parallel --filter \"./**\" preview",
+    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
+    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+    "dev:hosts": "pnpm --filter \"./host\" dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
